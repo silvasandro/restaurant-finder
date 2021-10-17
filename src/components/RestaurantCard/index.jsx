@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ReactStars from "react-rating-stars-component";
 
 import restaurante from '../../assets/restaurante-fake.png';
-import Skeleton from '../Skeleton';
+import ImageSkeleton from '../ImageSkeleton';
 
 
 import { Restaurant, RestaurantInfo, RestaurantPhoto, Title, Address } from "./styles";
@@ -24,7 +24,7 @@ const RestaurantCard = ({ restaurant, onClick }) => {
         onLoad={() => setImageLoaded(true)}
         alt="Foto do Restaurante" 
         />
-        {!imageLoaded && <Skeleton width="100px" height="100px" />}
+        {!imageLoaded && <ImageSkeleton width="100px" height="100px" />}
       
       </Restaurant>
     )

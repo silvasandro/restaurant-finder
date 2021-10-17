@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 
-import Skeleton from '../Skeleton';
+import ImageSkeleton from '../ImageSkeleton';
 
 
 const Card = styled.div`
@@ -37,7 +37,7 @@ const ImageCard = ({ photo, title }) => {
       <Title>{title}</Title>
     </Card>
   ) : (
-    <Skeleton width="90px" height="90px" />
+    <ImageSkeleton width="90px" height="90px" />
     )}
   </>
  )

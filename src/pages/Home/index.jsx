@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import TextField, { Input } from "@material/react-text-field";
 import { useSelector } from "react-redux";
+import TextField, { Input } from "@material/react-text-field";
 import MaterialIcon from "@material/react-material-icon";
 
 import logo from "../../assets/logo.svg";
@@ -11,7 +11,7 @@ import {
   Modal,
   Map,
   Loader,
-  Skeleton,
+  ImageSkeleton,
 } from "../../components";
 
 import {
@@ -26,7 +26,7 @@ import {
 } from "./styles";
 
 const Home = () => {
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState('');
   const [query, setQuery] = useState(null);
   const [placeId, setPlaceId] = useState(null);
   const [modalOpened, setModalOpened] = useState(false);
@@ -118,10 +118,10 @@ const Home = () => {
           </>
         ) : (
           <>
-            <Skeleton width="10px" height="10px" />
-            <Skeleton width="10px" height="10px" />
-            <Skeleton width="10px" height="10px" />
-            <Skeleton width="10px" height="10px" />
+            <ImageSkeleton width="10px" height="10px" />
+            <ImageSkeleton width="10px" height="10px" />
+            <ImageSkeleton width="10px" height="10px" />
+            <ImageSkeleton width="10px" height="10px" />
           </>
         )}
       </Modal>
